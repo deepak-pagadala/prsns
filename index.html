@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ef">
   <title>Priscilla's Sweet &amp; Savory</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -15,13 +16,17 @@
   <div class="logo">
     <a href="#top"><img src="logo.png" alt="Priscilla's Sweet &amp; Savory" style="height:100px;width:auto;display:block;"></a>
   </div>
-  <ul class="nav-center">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-center" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-center" id="nav-center">
     <li><a href="#menu">Menu</a></li>
     <li><a href="#our-story">Our Story</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li class="nav-center-btn"><a class="nav-btn" href="#contact">Place an Order</a></li>
   </ul>
-  <a class="nav-btn" href="#contact">Place an Order</a>
+  <a class="nav-btn nav-btn-desktop" href="#contact">Place an Order</a>
 </nav>
 
 <!-- HERO -->

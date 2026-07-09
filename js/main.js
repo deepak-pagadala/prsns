@@ -1,3 +1,21 @@
+function toggleNav() {
+  const nav = document.getElementById('nav-center');
+  const btn = document.getElementById('nav-toggle');
+  const open = nav.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+document.querySelectorAll('#nav-center a').forEach(link => {
+  link.addEventListener('click', () => {
+    const nav = document.getElementById('nav-center');
+    const btn = document.getElementById('nav-toggle');
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+});
+
 function updateOrderForm(type) {
   document.querySelectorAll('.order-fields').forEach(f => f.style.display = 'none');
   if (type) {
