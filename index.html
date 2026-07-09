@@ -36,8 +36,8 @@
   <div class="hero-rule"><div class="hero-rule-inner">✦ ✦ ✦</div></div>
   <p class="hero-sub">Wedding cakes, birthday cakes, cupcakes &amp; more, each one made from scratch, just for you.</p>
   <div class="hero-actions">
-    <button class="btn-filled">Browse the Menu</button>
-    <button class="btn-outline">Custom Order</button>
+    <a class="btn-filled" href="#menu">Browse the Menu</a>
+    <a class="btn-outline" href="#contact">Custom Order</a>
   </div>
   <div class="hero-tags">
     <div class="hero-tag">Wedding Cakes</div>
@@ -370,7 +370,7 @@
       <div class="info-line"><strong>Instagram</strong><span>@pr_sweet_and_savory</span></div>
     </div>
     <div>
-      <form class="form-wrap" action="https://formspree.io/f/xnjkkepe" method="POST" enctype="multipart/form-data">
+      <form class="form-wrap" id="order-form" action="https://formspree.io/f/xnjkkepe" method="POST" enctype="multipart/form-data">
         <div class="form-title">Place an Order</div>
 
         <!-- Core fields -->
@@ -378,6 +378,36 @@
         <div class="fg"><label>Email Address <span class="req">*</span></label><input type="email" name="email" placeholder="you@email.com" required></div>
         <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" name="phone" placeholder="(224) 000-0000" required></div>
         <div class="fg"><label>Event Date <span class="req">*</span></label><input type="date" name="event_date" required></div>
+        <div class="fg">
+          <label>Event Time <span class="req">*</span></label>
+          <select name="event_time" required>
+            <option value="">— Select hour —</option>
+            <option>12:00 AM</option>
+            <option>1:00 AM</option>
+            <option>2:00 AM</option>
+            <option>3:00 AM</option>
+            <option>4:00 AM</option>
+            <option>5:00 AM</option>
+            <option>6:00 AM</option>
+            <option>7:00 AM</option>
+            <option>8:00 AM</option>
+            <option>9:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>1:00 PM</option>
+            <option>2:00 PM</option>
+            <option>3:00 PM</option>
+            <option>4:00 PM</option>
+            <option>5:00 PM</option>
+            <option>6:00 PM</option>
+            <option>7:00 PM</option>
+            <option>8:00 PM</option>
+            <option>9:00 PM</option>
+            <option>10:00 PM</option>
+            <option>11:00 PM</option>
+          </select>
+        </div>
         <div class="fg">
           <label>Type of Order <span class="req">*</span></label>
           <select id="order-type" name="order_type" onchange="updateOrderForm(this.value)" required>
@@ -542,8 +572,14 @@
 
         <!-- Always visible -->
         <div class="fg"><label>Order Details</label><textarea name="order_details" placeholder="Theme, colors, tier details, quantity specifics, or any other requests..."></textarea></div>
-        <button type="submit" class="form-submit" onclick="handleSubmit(this)">Send Enquiry</button>
+        <p class="form-error" id="form-error" style="display:none">Something went wrong sending your enquiry. Please try again, or call us directly.</p>
+        <button type="submit" class="form-submit">Send Enquiry</button>
       </form>
+      <div class="form-wrap form-success" id="form-success" style="display:none">
+        <div class="form-success-icon">✦</div>
+        <h3>Thank You!</h3>
+        <p>Your enquiry has been received. Someone from our team will reach out to you soon.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -551,17 +587,8 @@
 <!-- FOOTER -->
 <footer>
   <div class="f-logo-main">Priscilla's Sweet &amp; Savory</div>
-  <div class="f-logo-sub">Est. 2023 · Schaumburg, Illinois</div>
-  <div class="f-links">
-    <a href="#">Menu</a>
-    <a href="#">Our Story</a>
-    <a href="#">Gallery</a>
-    <a href="#">Reviews</a>
-    <a href="#">Contact</a>
-    <a href="https://instagram.com/pr_sweet_and_savory" target="_blank">Instagram</a>
-  </div>
   <div class="f-rule"></div>
-  <p>Handcrafted with love in Schaumburg, Illinois · © 2026 Priscilla's Sweet &amp; Savory</p>
+  <p>Handcrafted with love · © 2026 Priscilla's Sweet &amp; Savory</p>
 </footer>
 
 <script src="js/main.js"></script>

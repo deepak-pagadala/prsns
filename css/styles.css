@@ -66,9 +66,9 @@ nav::after{content:'';display:block;position:absolute;bottom:-4px;left:0;right:0
 .hero-rule-inner{color:var(--dusty-rose);font-size:.85rem;letter-spacing:.2em}
 .hero-sub{font-family:'Lora',serif;font-size:1.05rem;color:var(--muted);max-width:480px;margin:0 auto 2rem;line-height:1.8;font-style:italic}
 .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-filled{background:var(--rose-dark);color:var(--cream);padding:.75rem 2.2rem;border:none;font-family:'Lora',serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.btn-filled{background:var(--rose-dark);color:var(--cream);padding:.75rem 2.2rem;border:none;font-family:'Lora',serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block}
 .btn-filled:hover{background:var(--rose);letter-spacing:.14em}
-.btn-outline{background:transparent;color:var(--rose-dark);padding:.75rem 2.2rem;border:1.5px solid var(--rose);font-family:'Lora',serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.btn-outline{background:transparent;color:var(--rose-dark);padding:.75rem 2.2rem;border:1.5px solid var(--rose);font-family:'Lora',serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block}
 .btn-outline:hover{background:var(--warm)}
 .hero-tags{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
 .hero-tag{background:var(--paper);border:1px solid var(--border);padding:.5rem 1.2rem;font-size:.78rem;color:var(--muted);letter-spacing:.08em;font-family:'Lora',serif}
@@ -176,6 +176,11 @@ nav::after{content:'';display:block;position:absolute;bottom:-4px;left:0;right:0
 .file-input{cursor:pointer;font-family:'Lora',serif;font-size:.83rem;color:var(--muted)}
 .file-input::file-selector-button,.file-input::-webkit-file-upload-button{font-family:'Lora',serif;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--border);color:var(--muted);padding:.3rem .9rem;cursor:pointer;margin-right:.8rem;transition:.2s;-webkit-appearance:none;appearance:none;border-radius:0}
 .file-input::file-selector-button:hover,.file-input::-webkit-file-upload-button:hover{background:var(--dusty-rose);color:white;border-color:var(--dusty-rose)}
+.form-error{font-family:'Lora',serif;font-size:.8rem;color:#a03a3a;font-style:italic;margin:-.3rem 0 1rem;padding:.5rem .75rem;background:#fbeaea;border-left:2px solid #a03a3a}
+.form-success{text-align:center;padding:3.5rem 2rem}
+.form-success-icon{font-size:1.6rem;color:var(--dusty-rose);letter-spacing:.3em;margin-bottom:1rem}
+.form-success h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--rose-dark);margin-bottom:.7rem}
+.form-success p{font-family:'Lora',serif;font-size:.9rem;color:var(--muted);line-height:1.8;font-style:italic}
 
 /* FOOTER */
 footer{background:var(--rose-dark);color:var(--cream);padding:3rem 2.5rem 2rem;text-align:center}

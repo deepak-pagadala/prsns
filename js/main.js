@@ -44,12 +44,34 @@ function filterGallery(cat, btn) {
   });
 }
 
-function handleSubmit(btn) {
-  btn.textContent = "Enquiry Sent — We'll Be in Touch Soon";
-  btn.style.background = 'var(--sage-dark)';
-  btn.style.letterSpacing = '.12em';
-  setTimeout(() => {
-    btn.textContent = 'Send Enquiry';
-    btn.style.background = '';
-  }, 4000);
+const orderForm = document.getElementById('order-form');
+if (orderForm) {
+  orderForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const submitBtn = orderForm.querySelector('.form-submit');
+    const errorMsg = document.getElementById('form-error');
+    errorMsg.style.display = 'none';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch(orderForm.action, {
+      method: 'POST',
+      body: new FormData(orderForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        orderForm.reset();
+        document.querySelectorAll('.order-fields').forEach(f => f.style.display = 'none');
+        orderForm.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(() => {
+      errorMsg.style.display = 'block';
+    }).finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Enquiry';
+    });
+  });
 }
