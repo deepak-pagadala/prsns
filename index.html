@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priscilla's Sweet &amp; Savory</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Priscilla's Sweet and Savory — Vintage bakery website</h2>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <a href="#top"><img src="logo.png" alt="Priscilla's Sweet &amp; Savory" style="height:100px;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-center">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#our-story">Our Story</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-btn" href="#contact">Place an Order</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ornament"><span>✦</span> Handcrafted Cakes &amp; Confections <span>✦</span></div>
+  <h1>Baked with <em>love,</em><br>made to remember.</h1>
+  <div class="hero-rule"><div class="hero-rule-inner">✦ ✦ ✦</div></div>
+  <p class="hero-sub">Wedding cakes, birthday cakes, cupcakes &amp; more, each one made from scratch, just for you.</p>
+  <div class="hero-actions">
+    <button class="btn-filled">Browse the Menu</button>
+    <button class="btn-outline">Custom Order</button>
+  </div>
+  <div class="hero-tags">
+    <div class="hero-tag">Wedding Cakes</div>
+    <div class="hero-tag">Birthday Cakes</div>
+    <div class="hero-tag">Graduation Cakes</div>
+    <div class="hero-tag">Cupcakes</div>
+    <div class="hero-tag">All Occasions</div>
+  </div>
+</section>
+
+<!-- ORNAMENT -->
+<div class="ornament-divider">— ✦ —</div>
+
+<!-- MENU -->
+<section class="menu-sec" id="menu">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Our Menu</div>
+    <h2 class="sec-title">Everything baked <em>fresh</em> to order</h2>
+    <p class="sec-sub">Real butter. Real vanilla. No shortcuts. Every item made the way it ought to be.</p>
+  </div>
+
+  <div class="menu-tabs">
+    <button class="mtab active" onclick="showCategory('cakes',this)">Cakes &amp; Cupcakes</button>
+    <button class="mtab" onclick="showCategory('cookies',this)">Cookies</button>
+    <button class="mtab" onclick="showCategory('cakepops',this)">Cake Pops</button>
+    <button class="mtab" onclick="showCategory('treats',this)">Treats</button>
+  </div>
+
+  <!-- CAKES & CUPCAKES & TRIFLES -->
+  <div class="menu-panel" id="panel-cakes">
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Birthday Cakes</h3><span class="price">Custom quote</span></div>
+      <p>Any theme, any size. Custom designs that make you feel truly celebrated.</p>
+    </div>
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Graduation Cakes</h3><span class="price">Custom quote</span></div>
+      <p>School colors and custom inscriptions to mark your milestone.</p>
+    </div>
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Special Occasion Cakes</h3><span class="price">Custom quote</span></div>
+      <p>From Wedding anniversaries, baby showers, bridal showers - every occasion special.</p>
+    </div>
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Cupcakes</h3><span class="price">from $3.50 each</span></div>
+      <p>Available in any flavor of your choice. Sold by the dozen.</p>
+    </div>
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Trifles</h3><span class="price">Custom quote</span></div>
+      <p>Layers of cake, cream, and choice of your filling - an elegant dessert that serves a crowd beautifully.</p>
+    </div>
+    <div class="panel-flavors">
+      <div class="panel-flavors-label">Available Flavors</div>
+      <div class="flavor-chips">
+        <span class="fchip">Vanilla</span>
+        <span class="fchip">Double Chocolate</span>
+        <span class="fchip">Red Velvet</span>
+        <span class="fchip">Carrot</span>
+        <span class="fchip">Black Forest</span>
+        <span class="fchip">Lemon &amp; Raspberry</span>
+        <span class="fchip">Summer Berry</span>
+        <span class="fchip">Mango Crème</span>
+        <span class="fchip">Piña Colada</span>
+        <span class="fchip">Chai Caramel</span>
+        <span class="fchip">Tres Leches</span>
+        <span class="fchip">Gulab Jamun</span>
+        <span class="fchip">Rasmalai</span>
+        <span class="fchip">Pistachio &amp; Rose</span>
+        <span class="fchip">Mocha Espresso</span>
+        <span class="fchip">Tiramisu</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIES -->
+  <div class="menu-panel hidden" id="panel-cookies">
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Cookies</h3><span class="price">Custom quote</span></div>
+      <p>Soft, buttery, and packed with flavor - perfect for favors, gift boxes, or a sweet treat just because. Sold by the dozen.</p>
+    </div>
+    <div class="panel-flavors">
+      <div class="panel-flavors-label">Available Flavors</div>
+      <div class="flavor-chips">
+        <span class="fchip">Chocolate Chip</span>
+        <span class="fchip">Brown Butter Chocolate Chip</span>
+        <span class="fchip">Sugar Cookie</span>
+        <span class="fchip">Double Chocolate Chip</span>
+        <span class="fchip">Peanut Butter</span>
+        <span class="fchip">Snickerdoodle</span>
+        <span class="fchip">Oatmeal Raisin</span>
+        <span class="fchip">White Chocolate Macadamia Nut</span>
+        <span class="fchip">Red Velvet</span>
+        <span class="fchip">S'mores</span>
+        <span class="fchip">Lemon Crinkle</span>
+        <span class="fchip">Shortbread (Checkered)</span>
+        <span class="fchip">Gingerbread</span>
+        <span class="fchip">Peppermint</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAKE POPS -->
+  <div class="menu-panel hidden" id="panel-cakepops">
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Cake Pops</h3><span class="price">Custom quote</span></div>
+      <p>Moist cake crumbles, beautifully decorated to match your event's theme.</p>
+    </div>
+    <div class="panel-flavors">
+      <div class="panel-flavors-label">Available Flavors</div>
+      <div class="flavor-chips">
+        <span class="fchip">Vanilla</span>
+        <span class="fchip">Chocolate</span>
+        <span class="fchip">Red Velvet</span>
+        <span class="fchip">Lemon</span>
+        <span class="fchip">Birthday Cake</span>
+        <span class="fchip">Carrot Cake</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TREATS -->
+  <div class="menu-panel hidden" id="panel-treats">
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Chocolate-Covered Oreos</h3><span class="price">Custom quote</span></div>
+      <p>Classic Oreos hand-dipped in rich chocolate and decorated to match your event's theme. Great for party favors.</p>
+    </div>
+    <div class="panel-item">
+      <div class="panel-item-top"><h3>Rice Crispy Treats</h3><span class="price">Custom quote</span></div>
+      <p>Gooey and dipped in chocolate - a nostalgic favorite dressed up for any celebration.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Our Work</div>
+    <h2 class="sec-title">Made with love, <em>crafted to impress</em></h2>
+    <p class="sec-sub">A glimpse into the creations that have graced tables, celebrations, and memories.</p>
+  </div>
+
+  <div class="gallery-tabs">
+    <button class="gtab active" onclick="filterGallery('all',this)">All</button>
+    <button class="gtab" onclick="filterGallery('birthday',this)">Birthday Cakes</button>
+    <button class="gtab" onclick="filterGallery('cakepops',this)">Cake Pops</button>
+    <button class="gtab" onclick="filterGallery('graduation',this)">Graduation</button>
+    <button class="gtab" onclick="filterGallery('trifles',this)">Trifles</button>
+    <button class="gtab" onclick="filterGallery('treats',this)">Treats</button>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/1.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/2.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/3.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/4.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/5.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/6.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="cakepops">
+      <img src="images/7.jpeg" alt="Cake Pops">
+      <div class="gallery-overlay"><span>Cake Pops</span></div>
+    </div>
+    <div class="gallery-item" data-cat="cakepops">
+      <img src="images/8.jpeg" alt="Cake Pops">
+      <div class="gallery-overlay"><span>Cake Pops</span></div>
+    </div>
+    <div class="gallery-item" data-cat="treats">
+      <img src="images/9.jpeg" alt="Chocolate-Covered Oreos">
+      <div class="gallery-overlay"><span>Chocolate-Covered Oreos</span></div>
+    </div>
+    <div class="gallery-item" data-cat="cakepops">
+      <img src="images/10.jpeg" alt="Cake Pops">
+      <div class="gallery-overlay"><span>Cake Pops</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/11.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/12.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="trifles">
+      <img src="images/13.jpeg" alt="Trifle">
+      <div class="gallery-overlay"><span>Trifle</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="images/14.jpeg" alt="Birthday Cake">
+      <div class="gallery-overlay"><span>Birthday Cake</span></div>
+    </div>
+    <div class="gallery-item" data-cat="graduation">
+      <img src="images/15.jpeg" alt="Graduation Cake">
+      <div class="gallery-overlay"><span>Graduation Cake</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story-sec" id="our-story">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Our Story</div>
+    <h2 class="sec-title">Born from a love of <em>baking</em></h2>
+  </div>
+  <div class="story-body">
+    <p>Priscilla's Sweet &amp; Savory began the way all good things do — at home, in a small kitchen, with a deep love for the craft. What started as weekend baking for family and friends quickly became something much bigger: a way to bring people together, mark milestones, and make ordinary moments feel extraordinary.</p>
+    <blockquote class="story-quote">"Every cake I make carries a piece of my heart. I want every customer to feel that the moment they open the box."</blockquote>
+    <p>Founded in 2023 and rooted in Schaumburg, Illinois, Priscilla's is a home-based bakery built on the belief that handmade is always better. No mass production, no shortcuts — just real ingredients, personal attention, and a genuine passion for creating something beautiful. Whether it's a towering wedding cake or a dozen cookies for a school party, every order receives the same care and dedication.</p>
+    <p>Over the years, Priscilla has developed an extensive flavor menu inspired by both classic American baking and the rich culinary traditions of cultures close to her heart — from Tres Leches and Gulab Jamun to Pistachio &amp; Rose and Chai Caramel. Each flavor tells a story, and each creation is made just for you.</p>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="spec-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Why Priscilla's</div>
+    <h2 class="sec-title">The old-fashioned way <em>done right</em></h2>
+    <p class="sec-sub">We believe the best ingredients are time, care, and a little bit of nostalgia.</p>
+  </div>
+  <div class="spec-grid">
+    <div class="spec-item">
+      <div class="spec-num">01</div>
+      <h3>Custom Designs</h3>
+      <p>From a simple sketch to a breathtaking centerpiece — we bring your vision to life, every detail considered.</p>
+    </div>
+    <div class="spec-item">
+      <div class="spec-num">02</div>
+      <h3>All-Natural Ingredients</h3>
+      <p>No artificial flavors. Real butter, fresh eggs, premium chocolate. You'll taste the difference.</p>
+    </div>
+    <div class="spec-item">
+      <div class="spec-num">03</div>
+      <h3>Local Delivery</h3>
+      <p>We deliver throughout Schaumburg and surrounding areas, handled with the utmost care.</p>
+    </div>
+    <div class="spec-item">
+      <div class="spec-num">04</div>
+      <h3>Tasting Sessions</h3>
+      <p>For weddings and large orders, we offer a tasting session so every bite is exactly right.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">How It Works</div>
+    <h2 class="sec-title">From your idea to <em>your table</em></h2>
+  </div>
+  <div class="process-row">
+    <div class="process-step">
+      <div class="step-letter">I</div>
+      <h4>Reach Out</h4>
+      <p>Tell us about your event, your vision, and your date. No order too big or small.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-letter">II</div>
+      <h4>We Design Together</h4>
+      <p>We discuss flavors, tiers, and decoration. You receive a personalized quote.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-letter">III</div>
+      <h4>Baked Fresh</h4>
+      <p>Your order gets our full attention, made from scratch, with care.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-letter">IV</div>
+      <h4>Delivered with Joy</h4>
+      <p>Pick up or receive delivery. Watch it become the centerpiece of your celebration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-sec" id="reviews">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Kind Words</div>
+    <h2 class="sec-title">What our customers say</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>Priscilla made our wedding cake and it was an absolute masterpiece. Stunning to look at, and even more delicious to eat. Our guests kept asking who made it.</p>
+      <div class="reviewer-name">Amanda M.</div>
+      <div class="reviewer-event">Wedding — June 2024</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>Five dozen cupcakes for my daughter's graduation — every single one was perfect. Moist, flavorful, and gone within the hour. We'll be back for every occasion.</p>
+      <div class="reviewer-name">Teresa J.</div>
+      <div class="reviewer-event">Graduation Party — May 2024</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>The birthday cake looked like something from a magazine. Dinosaur theme, hand-painted details, and it tasted even better than it looked. Truly extraordinary work.</p>
+      <div class="reviewer-name">David K.</div>
+      <div class="reviewer-event">Birthday Cake — March 2024</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="contact">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Get in Touch</div>
+    <h2 class="sec-title">Let's create something <em>wonderful</em></h2>
+    <p class="sec-sub">We'd love to be part of your special day. Reach out and let's begin.</p>
+  </div>
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Find Us</h3>
+      <p>Orders require at least a couple of days notice. Wedding cakes require 4–6 weeks. We're always happy to chat - don't hesitate to reach out.</p>
+      <div class="info-line"><strong>Phone</strong><span>(224) 704-3329</span></div>
+      <div class="info-line"><strong>Instagram</strong><span>@pr_sweet_and_savory</span></div>
+    </div>
+    <div>
+      <form class="form-wrap" action="https://formspree.io/f/xnjkkepe" method="POST" enctype="multipart/form-data">
+        <div class="form-title">Place an Order</div>
+
+        <!-- Core fields -->
+        <div class="fg"><label>Your Name <span class="req">*</span></label><input type="text" name="name" placeholder="e.g. Maria Garcia" required></div>
+        <div class="fg"><label>Email Address <span class="req">*</span></label><input type="email" name="email" placeholder="you@email.com" required></div>
+        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" name="phone" placeholder="(224) 000-0000" required></div>
+        <div class="fg"><label>Event Date <span class="req">*</span></label><input type="date" name="event_date" required></div>
+        <div class="fg">
+          <label>Type of Order <span class="req">*</span></label>
+          <select id="order-type" name="order_type" onchange="updateOrderForm(this.value)" required>
+            <option value="">— Please select —</option>
+            <option value="cake">Cake</option>
+            <option value="cupcakes">Cupcakes</option>
+            <option value="cookies">Cookies</option>
+            <option value="cakepops">Cake Pops</option>
+            <option value="treats">Treats</option>
+          </select>
+        </div>
+
+        <!-- CAKE -->
+        <div class="order-fields" id="fields-cake">
+          <div class="fg"><label>Occasion <span class="req">*</span></label><input type="text" name="occasion" placeholder="e.g. Birthday, Wedding, Quinceañera"></div>
+          <div class="fg">
+            <label>Cake Size</label>
+            <select name="cake_size">
+              <option value="">— Select size —</option>
+              <option>Bento (4 inch)</option>
+              <option>6 inch</option>
+              <option>8 inch</option>
+              <option>10 inch</option>
+              <option>12 inch</option>
+              <option>Sheet (customizable)</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Tiered Cake?</label>
+            <div class="radio-group">
+              <label class="rlabel"><input type="radio" name="tiered" value="No" checked onchange="showNote('tier-note', false)"> No</label>
+              <label class="rlabel"><input type="radio" name="tiered" value="Yes" onchange="showNote('tier-note', true)"> Yes</label>
+            </div>
+            <p class="form-note" id="tier-note" style="display:none">Please describe each tier's size and flavor in Order Details below.</p>
+          </div>
+          <div class="fg"><label>Inspiration Photo</label><input type="file" name="inspiration_photo" accept="image/*" class="file-input"></div>
+        </div>
+
+        <!-- CUPCAKES -->
+        <div class="order-fields" id="fields-cupcakes">
+          <div class="fg">
+            <label>Quantity</label>
+            <select name="cupcakes_quantity" onchange="showNote('cupcakes-qty-note', this.value==='more')">
+              <option value="">— Select dozens —</option>
+              <option value="Half dozen (6)">Half dozen (6)</option>
+              <option value="1 dozen (12)">1 dozen (12)</option>
+              <option value="2 dozen (24)">2 dozen (24)</option>
+              <option value="3 dozen (36)">3 dozen (36)</option>
+              <option value="more">More than 3 dozen</option>
+            </select>
+            <p class="form-note" id="cupcakes-qty-note" style="display:none">Please specify the exact quantity in Order Details.</p>
+          </div>
+          <div class="fg">
+            <label>Flavor</label>
+            <select name="cupcakes_flavor" onchange="showNote('cupcakes-flavor-note', this.value==='Mix &amp; Match')">
+              <option value="Mix &amp; Match">Mix &amp; Match</option>
+              <option>Vanilla</option><option>Double Chocolate</option><option>Red Velvet</option>
+              <option>Carrot</option><option>Black Forest</option><option>Lemon &amp; Raspberry</option>
+              <option>Summer Berry</option><option>Mango Crème</option><option>Piña Colada</option>
+              <option>Chai Caramel</option><option>Tres Leches</option><option>Gulab Jamun</option>
+              <option>Rasmalai</option><option>Pistachio &amp; Rose</option><option>Mocha Espresso</option>
+              <option>Tiramisu</option>
+            </select>
+            <p class="form-note" id="cupcakes-flavor-note">Please specify your flavor mix in Order Details.</p>
+          </div>
+          <div class="fg"><label>Inspiration Photo</label><input type="file" name="inspiration_photo" accept="image/*" class="file-input"></div>
+        </div>
+
+        <!-- COOKIES -->
+        <div class="order-fields" id="fields-cookies">
+          <div class="fg">
+            <label>Quantity</label>
+            <select name="cookies_quantity" onchange="showNote('cookies-qty-note', this.value==='more')">
+              <option value="">— Select dozens —</option>
+              <option value="Half dozen (6)">Half dozen (6)</option>
+              <option value="1 dozen (12)">1 dozen (12)</option>
+              <option value="2 dozen (24)">2 dozen (24)</option>
+              <option value="3 dozen (36)">3 dozen (36)</option>
+              <option value="more">More than 3 dozen</option>
+            </select>
+            <p class="form-note" id="cookies-qty-note" style="display:none">Please specify the exact quantity in Order Details.</p>
+          </div>
+          <div class="fg">
+            <label>Flavor</label>
+            <select name="cookies_flavor" onchange="showNote('cookies-flavor-note', this.value==='Mix &amp; Match')">
+              <option value="Mix &amp; Match">Mix &amp; Match</option>
+              <option>Chocolate Chip</option><option>Brown Butter Chocolate Chip</option>
+              <option>Sugar Cookie</option><option>Double Chocolate Chip</option>
+              <option>Peanut Butter</option><option>Snickerdoodle</option>
+              <option>Oatmeal Raisin</option><option>White Chocolate Macadamia Nut</option>
+              <option>Red Velvet</option><option>S'mores</option><option>Lemon Crinkle</option>
+              <option>Shortbread (Checkered)</option><option>Gingerbread</option><option>Peppermint</option>
+            </select>
+            <p class="form-note" id="cookies-flavor-note">Please specify your flavor mix in Order Details.</p>
+          </div>
+          <div class="fg"><label>Inspiration Photo</label><input type="file" name="inspiration_photo" accept="image/*" class="file-input"></div>
+        </div>
+
+        <!-- CAKE POPS -->
+        <div class="order-fields" id="fields-cakepops">
+          <div class="fg">
+            <label>Quantity</label>
+            <select name="cakepops_quantity" onchange="showNote('cakepops-qty-note', this.value==='more')">
+              <option value="">— Select dozens —</option>
+              <option value="Half dozen (6)">Half dozen (6)</option>
+              <option value="1 dozen (12)">1 dozen (12)</option>
+              <option value="2 dozen (24)">2 dozen (24)</option>
+              <option value="3 dozen (36)">3 dozen (36)</option>
+              <option value="more">More than 3 dozen</option>
+            </select>
+            <p class="form-note" id="cakepops-qty-note" style="display:none">Please specify the exact quantity in Order Details.</p>
+          </div>
+          <div class="fg">
+            <label>Flavor</label>
+            <select name="cakepops_flavor" onchange="showNote('cakepops-flavor-note', this.value==='Mix &amp; Match')">
+              <option value="Mix &amp; Match">Mix &amp; Match</option>
+              <option>Vanilla</option><option>Chocolate</option><option>Red Velvet</option>
+              <option>Lemon</option><option>Birthday Cake</option><option>Carrot Cake</option>
+            </select>
+            <p class="form-note" id="cakepops-flavor-note">Please specify your flavor mix in Order Details.</p>
+          </div>
+          <div class="fg"><label>Inspiration Photo</label><input type="file" name="inspiration_photo" accept="image/*" class="file-input"></div>
+        </div>
+
+        <!-- TREATS -->
+        <div class="order-fields" id="fields-treats">
+          <div class="fg">
+            <label>Type of Treat</label>
+            <select name="treat_type">
+              <option value="">— Select type —</option>
+              <option>Chocolate Covered Oreos</option>
+              <option>Rice Crispies</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Quantity</label>
+            <select name="treats_quantity" onchange="showNote('treats-qty-note', this.value==='more')">
+              <option value="">— Select dozens —</option>
+              <option value="Half dozen (6)">Half dozen (6)</option>
+              <option value="1 dozen (12)">1 dozen (12)</option>
+              <option value="2 dozen (24)">2 dozen (24)</option>
+              <option value="3 dozen (36)">3 dozen (36)</option>
+              <option value="more">More than 3 dozen</option>
+            </select>
+            <p class="form-note" id="treats-qty-note" style="display:none">Please specify the exact quantity in Order Details.</p>
+          </div>
+          <div class="fg">
+            <label>Flavor</label>
+            <select name="treats_flavor" onchange="showNote('treats-flavor-note', this.value==='Mix &amp; Match')">
+              <option value="Mix &amp; Match">Mix &amp; Match</option>
+              <option>Vanilla</option><option>Double Chocolate</option><option>Red Velvet</option>
+              <option>Carrot</option><option>Black Forest</option><option>Lemon &amp; Raspberry</option>
+              <option>Summer Berry</option><option>Mango Crème</option><option>Piña Colada</option>
+              <option>Chai Caramel</option><option>Tres Leches</option><option>Gulab Jamun</option>
+              <option>Rasmalai</option><option>Pistachio &amp; Rose</option><option>Mocha Espresso</option>
+              <option>Tiramisu</option>
+            </select>
+            <p class="form-note" id="treats-flavor-note">Please specify your flavor mix in Order Details.</p>
+          </div>
+          <div class="fg"><label>Inspiration Photo</label><input type="file" name="inspiration_photo" accept="image/*" class="file-input"></div>
+        </div>
+
+        <!-- Always visible -->
+        <div class="fg"><label>Order Details</label><textarea name="order_details" placeholder="Theme, colors, tier details, quantity specifics, or any other requests..."></textarea></div>
+        <button type="submit" class="form-submit" onclick="handleSubmit(this)">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo-main">Priscilla's Sweet &amp; Savory</div>
+  <div class="f-logo-sub">Est. 2023 · Schaumburg, Illinois</div>
+  <div class="f-links">
+    <a href="#">Menu</a>
+    <a href="#">Our Story</a>
+    <a href="#">Gallery</a>
+    <a href="#">Reviews</a>
+    <a href="#">Contact</a>
+    <a href="https://instagram.com/pr_sweet_and_savory" target="_blank">Instagram</a>
+  </div>
+  <div class="f-rule"></div>
+  <p>Handcrafted with love in Schaumburg, Illinois · © 2026 Priscilla's Sweet &amp; Savory</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

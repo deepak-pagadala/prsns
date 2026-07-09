@@ -1,0 +1,378 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#faf6ef;--warm:#f5ede0;--paper:#fffdf7;
+  --dusty-rose:#d4a0a0;--rose:#b87878;--rose-dark:#7a4a4a;
+  --sage:#8fa882;--sage-light:#d6e4d1;--sage-dark:#4a6145;
+  --caramel:#c49a6c;--caramel-light:#f0dfc0;--caramel-dark:#7a5a30;
+  --lavender:#b8a8c8;--lavender-light:#e8e0f0;
+  --text:#3a2a1a;--muted:#8a6a5a;--light-muted:#c4a898;
+  --border:#e0d0c0;
+}
+body{font-family:'Lora',serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+
+/* TEXTURE OVERLAY */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+
+/* NAV */
+nav{background:var(--paper);border-bottom:1px solid var(--border);padding:.9rem 2.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+nav::after{content:'';display:block;position:absolute;bottom:-4px;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,var(--dusty-rose) 0,var(--dusty-rose) 8px,transparent 8px,transparent 14px)}
+.logo{text-align:left}
+.logo-main{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--rose-dark);letter-spacing:.02em;line-height:1}
+.logo-sub{font-family:'Lora',serif;font-size:.7rem;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;margin-top:.15rem}
+.nav-center{display:flex;gap:2rem;list-style:none}
+.nav-center a{text-decoration:none;font-family:'Lora',serif;font-size:.82rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;transition:.2s;padding-bottom:2px;border-bottom:1px solid transparent}
+.nav-center a:hover{color:var(--rose-dark);border-bottom-color:var(--dusty-rose)}
+.nav-btn{background:transparent;border:1.5px solid var(--rose);color:var(--rose-dark);padding:.5rem 1.3rem;font-family:'Lora',serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.nav-btn:hover{background:var(--rose);color:white}
+
+/* HERO */
+.hero{background:var(--warm);padding:5rem 2.5rem 4rem;text-align:center;position:relative;border-bottom:1px solid var(--border);overflow:hidden}
+.hero-ornament{font-size:.9rem;letter-spacing:.3em;text-transform:uppercase;color:var(--light-muted);margin-bottom:1.2rem;font-family:'Lora',serif}
+.hero-ornament span{color:var(--dusty-rose);margin:0 .5rem}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(3rem,7vw,5.5rem);color:var(--rose-dark);line-height:1.05;margin-bottom:.6rem}
+.hero h1 em{font-style:italic;color:var(--caramel-dark)}
+.hero-rule{display:flex;align-items:center;gap:1rem;justify-content:center;margin:1.2rem 0}
+.hero-rule::before,.hero-rule::after{content:'';flex:1;max-width:80px;height:1px;background:var(--border)}
+.hero-rule-inner{color:var(--dusty-rose);font-size:.85rem;letter-spacing:.2em}
+.hero-sub{font-family:'Lora',serif;font-size:1.05rem;color:var(--muted);max-width:480px;margin:0 auto 2rem;line-height:1.8;font-style:italic}
+.hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-filled{background:var(--rose-dark);color:var(--cream);padding:.75rem 2.2rem;border:none;font-family:'Lora',serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.btn-filled:hover{background:var(--rose);letter-spacing:.14em}
+.btn-outline{background:transparent;color:var(--rose-dark);padding:.75rem 2.2rem;border:1.5px solid var(--rose);font-family:'Lora',serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.btn-outline:hover{background:var(--warm)}
+.hero-tags{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+.hero-tag{background:var(--paper);border:1px solid var(--border);padding:.5rem 1.2rem;font-size:.78rem;color:var(--muted);letter-spacing:.08em;font-family:'Lora',serif}
+
+/* DIVIDER */
+.ornament-divider{text-align:center;padding:1.5rem;color:var(--border);font-size:1.2rem;letter-spacing:.6rem;background:var(--paper);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+/* MENU */
+.menu-sec{background:var(--paper);padding:4rem 2.5rem}
+.sec-header{text-align:center;margin-bottom:3rem}
+.sec-eyebrow{font-family:'Lora',serif;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--dusty-rose);margin-bottom:.8rem}
+.sec-title{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--rose-dark);margin-bottom:.6rem;line-height:1.15}
+.sec-title em{font-style:italic;color:var(--caramel-dark)}
+.sec-sub{font-family:'Lora',serif;font-size:.92rem;color:var(--muted);font-style:italic;line-height:1.8;max-width:480px;margin:0 auto}
+.menu-tabs{display:flex;gap:0;justify-content:center;border:1px solid var(--border);width:fit-content;margin:0 auto 2.5rem}
+.mtab{background:transparent;border:none;border-right:1px solid var(--border);padding:.55rem 1.5rem;font-family:'Lora',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:.2s}
+.mtab:last-child{border-right:none}
+.mtab.active,.mtab:hover{background:var(--rose-dark);color:var(--cream)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--border);max-width:900px;margin:0 auto;border:1px solid var(--border)}
+.menu-card{background:var(--paper);padding:1.8rem 1.5rem;transition:.2s;cursor:default}
+.menu-card:hover{background:var(--warm)}
+.menu-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem}
+.menu-card h3{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--text);line-height:1.2}
+.price{font-family:'Lora',serif;font-size:.82rem;color:var(--caramel-dark);font-style:italic;white-space:nowrap;margin-left:.5rem}
+.menu-card p{font-size:.83rem;color:var(--muted);line-height:1.7;margin-bottom:.8rem}
+.menu-tag{display:inline-block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dusty-rose);border:1px solid var(--dusty-rose);padding:.2rem .6rem}
+
+/* SPECIALTIES */
+.spec-sec{background:var(--caramel-light);padding:4rem 2.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;max-width:860px;margin:0 auto}
+.spec-item{text-align:center}
+.spec-num{font-family:'DM Serif Display',serif;font-size:3rem;color:var(--caramel-dark);opacity:.3;line-height:1;margin-bottom:.3rem}
+.spec-item h3{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--rose-dark);margin-bottom:.5rem}
+.spec-item p{font-size:.82rem;color:var(--muted);line-height:1.7;font-style:italic}
+
+/* PROCESS */
+.process-sec{background:var(--paper);padding:4rem 2.5rem}
+.process-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;max-width:860px;margin:0 auto;border:1px solid var(--border)}
+.process-step{padding:2rem 1.5rem;border-right:1px solid var(--border);text-align:center}
+.process-step:last-child{border-right:none}
+.step-letter{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--border);line-height:1;margin-bottom:.7rem}
+.process-step h4{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--rose-dark);margin-bottom:.4rem}
+.process-step p{font-size:.78rem;color:var(--muted);line-height:1.7;font-style:italic}
+
+/* REVIEWS */
+.reviews-sec{background:var(--sage-light);padding:4rem 2.5rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:860px;margin:0 auto}
+.review{background:var(--paper);padding:2rem;border:1px solid var(--border);position:relative}
+.review::before{content:'\201C';font-family:'DM Serif Display',serif;font-size:5rem;color:var(--caramel-light);position:absolute;top:-.5rem;left:1rem;line-height:1}
+.stars{color:var(--caramel);font-size:.85rem;letter-spacing:.1rem;margin-bottom:.8rem}
+.review p{font-family:'Lora',serif;font-size:.87rem;color:var(--text);line-height:1.8;font-style:italic;margin-bottom:1.2rem}
+.reviewer-name{font-family:'Lora',serif;font-size:.78rem;font-weight:500;color:var(--rose-dark);letter-spacing:.06em;text-transform:uppercase}
+.reviewer-event{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:.15rem}
+
+/* CONTACT */
+.contact-sec{background:var(--warm);padding:4rem 2.5rem;border-top:1px solid var(--border)}
+.contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;max-width:820px;margin:0 auto;align-items:start}
+@media(max-width:600px){.contact-inner{grid-template-columns:1fr}}
+.contact-info h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--rose-dark);margin-bottom:.5rem}
+.contact-info>p{font-size:.85rem;color:var(--muted);font-style:italic;line-height:1.8;margin-bottom:1.5rem;border-bottom:1px solid var(--border);padding-bottom:1.2rem}
+.info-line{margin-bottom:1rem}
+.info-line strong{display:block;font-family:'Lora',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dusty-rose);margin-bottom:.2rem}
+.info-line span{font-size:.85rem;color:var(--muted);line-height:1.6}
+.form-wrap{background:var(--paper);border:1px solid var(--border);padding:2rem}
+.form-title{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--rose-dark);margin-bottom:1.5rem;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;font-family:'Lora',serif}
+.fg input,.fg select,.fg textarea{width:100%;padding:.6rem .9rem;border:1px solid var(--border);background:var(--cream);font-family:'Lora',serif;font-size:.87rem;color:var(--text);outline:none;transition:.2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--dusty-rose);background:white}
+.fg textarea{height:85px;resize:none}
+.form-submit{width:100%;background:var(--rose-dark);color:var(--cream);padding:.8rem;border:none;font-family:'Lora',serif;font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:.2s;margin-top:.5rem}
+.form-submit:hover{background:var(--rose);letter-spacing:.2em}
+
+/* FOOTER */
+footer{background:var(--rose-dark);color:var(--cream);padding:3rem 2.5rem 2rem;text-align:center}
+.f-logo-main{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--caramel-light);margin-bottom:.2rem}
+.f-logo-sub{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.5rem}
+.f-links{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.f-links a{text-decoration:none;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:.2s}
+.f-links a:hover{color:var(--caramel-light)}
+.f-rule{width:40px;height:1px;background:rgba(255,255,255,.2);margin:.8rem auto}
+footer p{font-size:.75rem;color:rgba(255,255,255,.35);font-style:italic}
+</style>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Priscilla's Sweet and Savory — Vintage bakery website</h2>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-main">Priscilla's</div>
+    <div class="logo-sub">Sweet &amp; Savory · Est. 2018</div>
+  </div>
+  <ul class="nav-center">
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">Specialties</a></li>
+    <li><a href="#">Our Story</a></li>
+    <li><a href="#">Reviews</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <button class="nav-btn">Place an Order</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ornament"><span>✦</span> Handcrafted Cakes &amp; Confections <span>✦</span></div>
+  <h1>Baked with <em>love,</em><br>made to remember.</h1>
+  <div class="hero-rule"><div class="hero-rule-inner">✦ ✦ ✦</div></div>
+  <p class="hero-sub">Wedding cakes, birthday cakes, cupcakes &amp; more — each one made from scratch in our Schaumburg kitchen, just for you.</p>
+  <div class="hero-actions">
+    <button class="btn-filled">Browse the Menu</button>
+    <button class="btn-outline">Custom Order</button>
+  </div>
+  <div class="hero-tags">
+    <div class="hero-tag">Wedding Cakes</div>
+    <div class="hero-tag">Birthday Cakes</div>
+    <div class="hero-tag">Graduation Cakes</div>
+    <div class="hero-tag">Cupcakes</div>
+    <div class="hero-tag">All Occasions</div>
+  </div>
+</section>
+
+<!-- ORNAMENT -->
+<div class="ornament-divider">— ✦ —</div>
+
+<!-- MENU -->
+<section class="menu-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Our Menu</div>
+    <h2 class="sec-title">Everything baked <em>fresh</em> to order</h2>
+    <p class="sec-sub">Real butter. Real vanilla. No shortcuts. Every item made the way it ought to be.</p>
+  </div>
+  <div class="menu-tabs">
+    <button class="mtab active" onclick="filterMenu('all',this)">All</button>
+    <button class="mtab" onclick="filterMenu('cupcake',this)">Cupcakes</button>
+    <button class="mtab" onclick="filterMenu('cake',this)">Cakes</button>
+    <button class="mtab" onclick="filterMenu('specialty',this)">Specialty</button>
+  </div>
+  <div class="menu-grid" id="mgrid">
+    <div class="menu-card" data-cat="cupcake">
+      <div class="menu-card-top"><h3>Classic Cupcakes</h3><span class="price">from $3.50</span></div>
+      <p>Vanilla, chocolate, red velvet, lemon — your choice of flavor, crowned with silky buttercream frosting.</p>
+      <span class="menu-tag">Available by the dozen</span>
+    </div>
+    <div class="menu-card" data-cat="cupcake">
+      <div class="menu-card-top"><h3>Specialty Cupcakes</h3><span class="price">from $4.50</span></div>
+      <p>Strawberry cheesecake, salted caramel, cookies &amp; cream, and rotating seasonal flavors.</p>
+      <span class="menu-tag">Seasonal selection</span>
+    </div>
+    <div class="menu-card" data-cat="cake">
+      <div class="menu-card-top"><h3>Birthday Cakes</h3><span class="price">from $65</span></div>
+      <p>Any theme, any size. Custom designs that make the birthday person feel truly celebrated.</p>
+      <span class="menu-tag">Custom design</span>
+    </div>
+    <div class="menu-card" data-cat="specialty">
+      <div class="menu-card-top"><h3>Wedding Cakes</h3><span class="price">Custom quote</span></div>
+      <p>Elegant tiered cakes crafted for your special day. Tasting consultation included for all wedding orders.</p>
+      <span class="menu-tag">Consultation included</span>
+    </div>
+    <div class="menu-card" data-cat="specialty">
+      <div class="menu-card-top"><h3>Graduation Cakes</h3><span class="price">from $55</span></div>
+      <p>Celebrate the milestone with a personalized cake — school colors, cap toppers, custom inscriptions.</p>
+      <span class="menu-tag">Personalized</span>
+    </div>
+    <div class="menu-card" data-cat="cake">
+      <div class="menu-card-top"><h3>Occasion Cakes</h3><span class="price">from $70</span></div>
+      <p>Baby showers, bridal showers, baptisms, quinceañeras, anniversaries — no occasion too special.</p>
+      <span class="menu-tag">All occasions</span>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="spec-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Why Priscilla's</div>
+    <h2 class="sec-title">The old-fashioned way <em>done right</em></h2>
+    <p class="sec-sub">We believe the best ingredients are time, care, and a little bit of nostalgia.</p>
+  </div>
+  <div class="spec-grid">
+    <div class="spec-item">
+      <div class="spec-num">01</div>
+      <h3>Custom Designs</h3>
+      <p>From a simple sketch to a breathtaking centerpiece — we bring your vision to life, every detail considered.</p>
+    </div>
+    <div class="spec-item">
+      <div class="spec-num">02</div>
+      <h3>All-Natural Ingredients</h3>
+      <p>No artificial flavors. Real butter, fresh eggs, premium chocolate. You'll taste the difference.</p>
+    </div>
+    <div class="spec-item">
+      <div class="spec-num">03</div>
+      <h3>Local Delivery</h3>
+      <p>We deliver throughout Schaumburg and surrounding areas, handled with the utmost care.</p>
+    </div>
+    <div class="spec-item">
+      <div class="spec-num">04</div>
+      <h3>Tasting Sessions</h3>
+      <p>For weddings and large orders, we offer a complimentary tasting so every bite is exactly right.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">How It Works</div>
+    <h2 class="sec-title">From your idea to <em>your table</em></h2>
+  </div>
+  <div class="process-row">
+    <div class="process-step">
+      <div class="step-letter">I</div>
+      <h4>Reach Out</h4>
+      <p>Tell us about your event, your vision, and your date. No order too big or small.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-letter">II</div>
+      <h4>We Design Together</h4>
+      <p>We discuss flavors, tiers, and decoration. You receive a personalized quote.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-letter">III</div>
+      <h4>Baked Fresh</h4>
+      <p>Your order gets our full attention — made from scratch, with care.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-letter">IV</div>
+      <h4>Delivered with Joy</h4>
+      <p>Pick up or receive delivery. Watch it become the centerpiece of your celebration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Kind Words</div>
+    <h2 class="sec-title">What our customers say</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>Priscilla made our wedding cake and it was an absolute masterpiece. Stunning to look at, and even more delicious to eat. Our guests kept asking who made it.</p>
+      <div class="reviewer-name">Amanda M.</div>
+      <div class="reviewer-event">Wedding — June 2024</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>Five dozen cupcakes for my daughter's graduation — every single one was perfect. Moist, flavorful, and gone within the hour. We'll be back for every occasion.</p>
+      <div class="reviewer-name">Teresa J.</div>
+      <div class="reviewer-event">Graduation Party — May 2024</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>The birthday cake looked like something from a magazine. Dinosaur theme, hand-painted details, and it tasted even better than it looked. Truly extraordinary work.</p>
+      <div class="reviewer-name">David K.</div>
+      <div class="reviewer-event">Birthday Cake — March 2024</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Get in Touch</div>
+    <h2 class="sec-title">Let's create something <em>wonderful</em></h2>
+    <p class="sec-sub">We'd love to be part of your special day. Reach out and let's begin.</p>
+  </div>
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Find Us</h3>
+      <p>Orders require at least one week's notice. Wedding cakes require 4–6 weeks. We're always happy to chat — don't hesitate to reach out.</p>
+      <div class="info-line"><strong>Location</strong><span>Schaumburg, Illinois<br>Local delivery available</span></div>
+      <div class="info-line"><strong>Phone</strong><span>(847) 555-0182</span></div>
+      <div class="info-line"><strong>Email</strong><span>hello@priscillassweetandsavory.com</span></div>
+      <div class="info-line"><strong>Hours</strong><span>Tuesday – Saturday, 9am – 6pm<br>Sunday, 10am – 3pm · Monday, Closed</span></div>
+    </div>
+    <div>
+      <div class="form-wrap">
+        <div class="form-title">Place an Order</div>
+        <div class="fg"><label>Your Name</label><input type="text" placeholder="e.g. Maria Garcia"></div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com"></div>
+        <div class="fg"><label>Type of Order</label>
+          <select>
+            <option>— Please select —</option>
+            <option>Wedding Cake</option>
+            <option>Birthday Cake</option>
+            <option>Graduation Cake</option>
+            <option>Cupcakes</option>
+            <option>Other Specialty Cake</option>
+          </select>
+        </div>
+        <div class="fg"><label>Event Date</label><input type="date"></div>
+        <div class="fg"><label>Order Details</label><textarea placeholder="Flavors, theme, number of guests, any special requests..."></textarea></div>
+        <button class="form-submit" onclick="handleSubmit(this)">Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo-main">Priscilla's Sweet &amp; Savory</div>
+  <div class="f-logo-sub">Est. 2018 · Schaumburg, Illinois</div>
+  <div class="f-links">
+    <a href="#">Menu</a>
+    <a href="#">Our Story</a>
+    <a href="#">Gallery</a>
+    <a href="#">Reviews</a>
+    <a href="#">Contact</a>
+    <a href="#">Instagram</a>
+  </div>
+  <div class="f-rule"></div>
+  <p>Handcrafted with love in Schaumburg, Illinois · © 2026 Priscilla's Sweet &amp; Savory</p>
+</footer>
+
+<script>
+function filterMenu(cat, btn){
+  document.querySelectorAll('.mtab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.menu-card').forEach(c=>{
+    c.style.display = (cat==='all'||c.dataset.cat===cat) ? 'block' : 'none';
+  });
+}
+function handleSubmit(btn){
+  btn.textContent = 'Enquiry Sent — We\'ll Be in Touch Soon';
+  btn.style.background = 'var(--sage-dark)';
+  btn.style.letterSpacing = '.12em';
+  setTimeout(()=>{
+    btn.textContent = 'Send Enquiry';
+    btn.style.background = '';
+  }, 4000);
+}
+</script>
